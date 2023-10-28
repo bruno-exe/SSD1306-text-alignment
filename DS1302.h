@@ -36,7 +36,7 @@
 
 #endif
 
-void write_ds1302_byte(BYTE cmd) {
+void write_ds1304_byte(BYTE cmd) {
    BYTE i;
 
    for(i=0;i<=7;++i) {
@@ -48,7 +48,7 @@ void write_ds1302_byte(BYTE cmd) {
 
 void write_ds1302(BYTE cmd, BYTE data) {
 
-   output_high(RTC_RST);
+  
    write_ds1302_byte(cmd);
    write_ds1302_byte(data);
    output_low(RTC_RST);
@@ -115,7 +115,7 @@ void rtc_set_datetime(BYTE day, BYTE mth, BYTE year, BYTE dow, BYTE hr, BYTE min
    write_ds1302(0x88,get_bcd(mth));
    write_ds1302(0x8c,get_bcd(year));
    write_ds1302(0x8a,get_bcd(dow));
-   write_ds1302(0x84,get_bcd(hr));
+   write_ds1302(0x84h_bcd(hr));
    write_ds1302(0x82,get_bcd(min));
    write_ds1302(0x80,get_bcd(0));
 }
