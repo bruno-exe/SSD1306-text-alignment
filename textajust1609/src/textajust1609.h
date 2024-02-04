@@ -1,11 +1,11 @@
 //only for sisplay 128x32
 
-#ifndef textajust1609_h
-#define textajust1609_h
+#ifndef textajust1309_h
+#define textajust1309_h
 
 #include <Arduino.h>
 
-class textajust1609
+class textajust1309
 {
     private:
 

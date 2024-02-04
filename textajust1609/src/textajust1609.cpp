@@ -2,11 +2,11 @@
 //only for sisplay 128x32
 
 
-#include <textajust1609.h>
+#include <textajust1309.h>
 
 //-------------------------------------------------------- classs
 
- String textajust1609::ajsuttext(String data){
+ String textajust1309::ajsuttext(String data){
 
   if(data.substring(21) != " " && data.length() > 21 ) // procura o fim da ultima palavra
     {
